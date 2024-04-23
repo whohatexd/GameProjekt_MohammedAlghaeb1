@@ -36,10 +36,12 @@ public class Player : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpStenghte));
         }
 
-        if (rb.velocity.x == 0)
-        {
-            Anime.Play("Anime.idle");
-        }
+        else { Anime.Play("Anime.idle"); }  
+
+        
+        
+            
+        
         
     }
 }
