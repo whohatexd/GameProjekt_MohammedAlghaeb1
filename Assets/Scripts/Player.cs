@@ -10,11 +10,11 @@ public class Player : MonoBehaviour
     float speedX;
     Rigidbody2D rb;
     public float jumpStenghte = 4;
-    Animation Anime;
+    Animator Anime;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Anime = GetComponent<Animation>();
+        Anime = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,25 +23,41 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(movspeed, rb.velocity.y);
-
-        }
-        
-        else if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = new Vector2(movspeed * -1, rb.velocity.y);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(new Vector2(0, jumpStenghte));
-        }
-
-        else { Anime.Play("Anime.idle"); }  
-
-        
-        
             
-        
-        
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = new Vector2(-movspeed, rb.velocity.y);
+        }
+        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.Space)) 
+        {
+            rb.velocity = new Vector2(rb.velocity.x,jumpStenghte);
+        }
+        if (transform.position.y < -7)
+        {
+            //
+        }
+
+
+
+
+
+
+
+        anime();
+
+    }
+
+    void anime()
+    {
+        if (rb.velocity.y != 0)
+        {
+            Anime.Play("Anime_Hopp");
+        }
+
+        else if (rb.velocity.x > 0)
+        {
+            Anime.Play("Anime_Move_D");
+        }
     }
 }
