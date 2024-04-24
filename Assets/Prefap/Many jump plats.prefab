@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614964218220853087}
   - component: {fileID: 2696853897219724994}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: tileset-sliced_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9171343792074373272}
   - component: {fileID: 5575412364987110818}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: tileset-sliced_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000597368508457126}
   - component: {fileID: 3566532407789406981}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: tileset-sliced_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,9 +262,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2424638929317550005}
   - component: {fileID: 6028838316974689201}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Many jump plats
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4324695481950021639}
   - component: {fileID: 6224083193487295857}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: tileset-sliced_5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

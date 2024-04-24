@@ -11,10 +11,13 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     public float jumpStenghte = 4;
     Animator Anime;
+    groundCheck groundcheck;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Anime = GetComponent<Animator>();
+        groundcheck = GetComponentInChildren<groundCheck>();
+        
     }
 
     // Update is called once per frame
@@ -29,7 +32,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(-movspeed, rb.velocity.y);
         }
-        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.Space)) 
+        if ((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && groundcheck.IsGrounded) 
         {
             rb.velocity = new Vector2(rb.velocity.x,jumpStenghte);
         }
@@ -50,14 +53,29 @@ public class Player : MonoBehaviour
 
     void anime()
     {
-        if (rb.velocity.y != 0)
+        if (rb.velocity.y > 0)
         {
             Anime.Play("Anime_Hopp");
+        }
+        else if (rb.velocity.y < 0)
+        {
+            Anime.Play("Anime_Fall");
         }
 
         else if (rb.velocity.x > 0)
         {
             Anime.Play("Anime_Move_D");
         }
+
+        else if(rb.velocity.x == 0 && rb.velocity.y == 0)
+        {
+            Anime.Play("Anime_Idle");
+        }
+        else if (rb.velocity.x < 0)
+        {
+            Anime.Play("Anime_Move_A");
+        }
+
+        
     }
 }
