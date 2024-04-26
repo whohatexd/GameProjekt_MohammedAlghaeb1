@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,11 +13,13 @@ public class Player : MonoBehaviour
     public float jumpStenghte = 4;
     Animator Anime;
     groundCheck groundcheck;
+    LoadGame SceneSwitch;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Anime = GetComponent<Animator>();
         groundcheck = GetComponentInChildren<groundCheck>();
+        SceneSwitch = GetComponentInChildren<LoadGame>();
         
     }
 
@@ -78,4 +81,5 @@ public class Player : MonoBehaviour
 
         
     }
+    
 }

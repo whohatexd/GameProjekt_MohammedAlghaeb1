@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1646940401}
+  DeathPlatform: {fileID: 1659698437}
 --- !u!1001 &96322507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1613872
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.y
@@ -349,11 +350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2741857
+      value: -6.16
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2088666
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.z
@@ -442,11 +443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.13
+      value: -6.24
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5159774
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.z
@@ -620,11 +621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.024693
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7792645
+      value: 6.12
       objectReference: {fileID: 0}
     - target: {fileID: 2424638929317550005, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_LocalPosition.z
@@ -849,7 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movspeed: 8
-  jumpStenghte: 20
+  jumpStenghte: 24
 --- !u!4 &1646940406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 628094956986543884, guid: a91c60c3ecbd21c4b88f6cbd6ec8918d, type: 3}
@@ -889,7 +890,7 @@ GameObject:
   - component: {fileID: 1659698440}
   m_Layer: 0
   m_Name: Death
-  m_TagString: Ground
+  m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,7 +904,7 @@ Transform:
   m_GameObject: {fileID: 1659698437}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: -5.48, z: 0}
+  m_LocalPosition: {x: -0.02, y: -6.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -938,7 +939,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.28033257, y: 0}
@@ -966,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79495cd17a97bee49bb9412bc80684a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1646940401}
+  nextLevel: MainMenu
 --- !u!1 &1945062151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1077,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 626713652792256140, guid: a91c60c3ecbd21c4b88f6cbd6ec8918d, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 626713652792256140, guid: a91c60c3ecbd21c4b88f6cbd6ec8918d, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 628094956986543884, guid: a91c60c3ecbd21c4b88f6cbd6ec8918d, type: 3}
