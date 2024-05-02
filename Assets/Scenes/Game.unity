@@ -36734,7 +36734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150232520600959459, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_Name
-      value: Many jump plats
+      value: platform
       objectReference: {fileID: 0}
     - target: {fileID: 6150232520600959459, guid: ed3c18c045116d744a688404e9186836, type: 3}
       propertyPath: m_TagString
