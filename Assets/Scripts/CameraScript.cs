@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class CameraScript : MonoBehaviour
 {
@@ -28,17 +29,18 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         playerpostion = new Vector2(transform.position.y, transform.position.x);
+        transform.position += new Vector3(0, 1*Time.deltaTime, 0);
 
-        if(transform.position.y < player.transform.position.y)
+        if (transform.position.y < player.transform.position.y)
         {
-            transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+            transform.position += new Vector3(0, player.transform.position.y - transform.position.y, 0);
+        }
+        else if (player.transform.position.y == 15)
+        {
+            transform.position += new Vector3(0, 5 * Time.deltaTime, 0);
         }
 
-        if (deathPLatPostion.y == playerpostion.y)
-        {
-            Gotoscene.GOtoScene("Main Menu");
-            Debug.Log("works");
-        }
+        
 
     }
 }
