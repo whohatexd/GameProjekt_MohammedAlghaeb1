@@ -13,13 +13,18 @@ public class Player : MonoBehaviour
     public float jumpStenghte = 4;
     Animator Anime;
     groundCheck groundcheck;
-    LoadGame SceneSwitch;
+    LoadGame go;
+    Vector3 startpostion;
+     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Anime = GetComponent<Animator>();
         groundcheck = GetComponentInChildren<groundCheck>();
-        SceneSwitch = GetComponentInChildren<LoadGame>();
+        go = GetComponentInChildren<LoadGame>();
+        startpostion = transform.position;
+       
+        
         
     }
 
@@ -81,5 +86,13 @@ public class Player : MonoBehaviour
 
         
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Bat")
+        {
+             
+        }
+    }
+
 }

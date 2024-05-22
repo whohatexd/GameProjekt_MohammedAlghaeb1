@@ -35,12 +35,22 @@ public class CameraScript : MonoBehaviour
         {
             transform.position += new Vector3(0, player.transform.position.y - transform.position.y, 0);
         }
-        else if (player.transform.position.y == 15)
+        else if (playerpostion.y == 15)
         {
             transform.position += new Vector3(0, 5 * Time.deltaTime, 0);
         }
 
         
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "bat")
+        {
+            Gotoscene = GetComponentInChildren<LoadGame>();
+            
+            
+        }
     }
 }
