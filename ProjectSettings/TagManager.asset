@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - End
   - Bat
+  - batTrigger
   layers:
   - Default
   - TransparentFX

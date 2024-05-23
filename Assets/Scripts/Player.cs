@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
-
-
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     groundCheck groundcheck;
     LoadGame go;
     Vector3 startpostion;
+    public string Nextlevel = "";
      
     void Start()
     {
@@ -91,7 +92,7 @@ public class Player : MonoBehaviour
     {
         if (collision.collider.tag == "Bat")
         {
-             
+            SceneManager.LoadScene(Nextlevel);
         }
     }
 
