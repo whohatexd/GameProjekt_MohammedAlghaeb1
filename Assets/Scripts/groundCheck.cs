@@ -24,6 +24,7 @@ public class groundCheck : MonoBehaviour
             IsGrounded = true;
             
         }
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -33,5 +34,7 @@ public class groundCheck : MonoBehaviour
             IsGrounded = false;
           
         }
+
+
     }
 }

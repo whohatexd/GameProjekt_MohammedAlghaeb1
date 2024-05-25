@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     groundCheck groundcheck;
     LoadGame go;
     Vector3 startpostion;
-    public string Nextlevel = "";
+    public string MainMenu = "";
+    public string NextLevel = "";
      
     void Start()
     {
@@ -90,10 +91,17 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Bat")
+        if (collision.collider.tag == "Bat"|| collision.collider.tag=="MainMenu")
         {
-            SceneManager.LoadScene(Nextlevel);
+            SceneManager.LoadScene(MainMenu);
         }
+
+        if (collision.collider.tag == "EndGame")
+        {
+            SceneManager.LoadScene(NextLevel);
+        }
+
+
     }
 
 }

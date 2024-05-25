@@ -8,6 +8,9 @@ TagManager:
   - End
   - Bat
   - batTrigger
+  - EndGame
+  - MainMenu
+  - wall
   layers:
   - Default
   - TransparentFX
